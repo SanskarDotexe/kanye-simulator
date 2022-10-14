@@ -16,7 +16,7 @@ class Display:
         self.level = 1
 
     def end(self):
-        s.bgpic("../images/end (2).gif")
+        s.bgpic("images/end.gif")
         self.type.goto(0, 148)
         # noinspection PyTypeChecker
         self.type.write(f"LOSSINGS HOGAYA  \n", align='center',
