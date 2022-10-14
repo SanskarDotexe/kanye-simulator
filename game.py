@@ -93,19 +93,19 @@ door = Character([175, 100], [175, 100], [0, 0], 25, "images/kim.gif")
 
 
 def up():
-    player.position[1] += 50
+    player.position[1] += 25
 
 
 def down():
-    player.position[1] -= 50
+    player.position[1] -= 25
 
 
 def right():
-    player.position[0] += 50
+    player.position[0] += 25
 
 
 def left():
-    player.position[0] -= 50
+    player.position[0] -= 25
 
 
 harm = [harm1, harm2, harm3, harm4, harm5, harm6]
@@ -122,6 +122,9 @@ def animation():
                 player.reset()
                 obj.reset()
             obj.update()
+            print(player.position)
+        if player.position[0]<-175:
+            player.reset()
 
         if player.in_collision(door):
             display.level += 1
@@ -130,6 +133,7 @@ def animation():
                 obj.position_change[1] *= 1.3
             player.reset()
             door.reset()
+
 
         s.listen()
         s.onkeypress(up, "Up")
