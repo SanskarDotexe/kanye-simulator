@@ -122,7 +122,7 @@ def animation():
                 player.reset()
                 obj.reset()
             obj.update()
-            print(player.position)
+
         if player.position[0]<-175:
             player.reset()
 
